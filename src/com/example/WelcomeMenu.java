@@ -31,8 +31,8 @@ public class WelcomeMenu implements Menu{
             case 3:
                 form = new CreateMemberForm();
                 break;
-//            case 3:
-//                Form form = new CreateRelationForm();
+//            case 4:
+//                form = new CreateRelationForm();
 //                break;
 //            case 4:
 //                Form form = new SeeRelatedForm();
