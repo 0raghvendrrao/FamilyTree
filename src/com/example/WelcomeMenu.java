@@ -26,11 +26,11 @@ public class WelcomeMenu implements Menu{
                 Form form = new CreateFamilyForm();
                 break;
             case 2:
-                Families.viewFamilies();
+                Families.viewFamilies(0);
                 break;
-//            case 2:
-//                Form form = new CreateMemberForm();
-//                break;
+            case 3:
+                form = new CreateMemberForm();
+                break;
 //            case 3:
 //                Form form = new CreateRelationForm();
 //                break;

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Families  {
-    private static List<Family> families = new ArrayList<>();
+    protected static List<Family> families = new ArrayList<>();
 
     private static void addFamily(Family fam)
     {
@@ -27,13 +27,18 @@ public class Families  {
         }
         addFamily(new Family(s));
     }
-    public static void viewFamilies()
+    public static void viewFamilies(int code)
     {
         int cnt = 1;
         for(Family family: families){
             System.out.println(cnt+" "+family.name);
             cnt++;
         }
+        if(code == 0)
+            viewMembers();
+
+    }
+    private static void viewMembers(){
         System.out.println("Enter number to view members/ Exit 0");
 
         Scanner s = new Scanner(System.in);
@@ -42,6 +47,5 @@ public class Families  {
         {
             families.get(input-1).viewMembers();
         }
-
     }
 }
